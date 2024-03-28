@@ -1,8 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ProductSection from "./components/productSection";
+import Hero from "./components/hero-section"
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,7 @@ function App() {
     <>
       <div>
         <a href=""></a>
+        <Hero/>
         <ProductSection />
       </div>
     </>
