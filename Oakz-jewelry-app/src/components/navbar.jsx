@@ -4,9 +4,9 @@ import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStore
 
 function Navbar() {
   return (
-    <div className='flex flex-row justify-between items-center py-8 px-4'>
+    <div className='flex flex-row justify-between font-bienvenido items-center py-8 px-4'>
         <div>
-            <h1 className='text-6xl text-brownbg font-normal'>OAKZ</h1>
+            <h1 className='text-6xl text-brownbg  font-normal'>OAKZ</h1>
         </div>
         <div>
             <div className="flex justify-center items-center gap-4">

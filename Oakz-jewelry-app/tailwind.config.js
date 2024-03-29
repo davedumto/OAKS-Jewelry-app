@@ -15,7 +15,10 @@ export default {
       height :{
         '433': '433px',
       },
-    },
+      fontFamily:{
+        'bienvenido' : 'Bienvenido'
+      }
+    }
   },
   plugins: [],
 };

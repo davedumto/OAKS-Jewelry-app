@@ -5,19 +5,22 @@ import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 export default function Footer() {
-
+  
+  const time = new Date().getFullYear()
+    
   return (
+    
     <>
-    <div className='w-full py-5 px-6 bg-green flex flex-col gap-3'>
+    <div className='w-full py-5 px-6 font-bienvenido bg-green flex flex-col gap-3'>
         <div className='flex flex-col justify-between gap-2 w-full px-4'>
             <div className="flex flex-row justify-between">
                 <div className='flex flex-col gap-2'>
-                  <h1 className='text-6xl text-brownbg font-normal'>OAKZ</h1>
-                  <p className='leading-[18px] text-beige'>At OAKZ, everyone is family. <br/>
+                  <h1 className='text-6xl text-brownbg font-bienvenido font-normal'>OAKZ</h1>
+                  <p className='leading-[18px] font-bienvenido text-beige'>At OAKZ, everyone is family. <br/>
                     We strive our best to make sure you look your best</p>
                 </div>
                 <div className='flex flex-col gap-2'>
-                  <h3 className='text-beige leading-9 text-[32px] font-normal'>What do you need?</h3>
+                  <h3 className='text-beige leading-9 text-[32px]  font-normal'>What do you need?</h3>
                   <div className='px-[2px] py-[1px]  flex flex-row gap-1 hover:cursor-text rounded-[50px] bg-transparent border-2 border-brownbg focus-within:border-brownbg focus-within:border-2 active:border-brownbg items-center'>
                     <input type="search" className='py-1 px-3 text-sm w-full active:border-2 focus:text-beige focus:border-none outline-none bg-inherit h-full  text-beige' placeholder='Search'  />
                     {/* <button className="absolute top-0 right-0 mr-3 mt-1 p-1 text-gray-500 hover:text-gray-700 focus:outline-none" onClick="document.querySelector('input[type=search]').value = ''">
@@ -43,7 +46,7 @@ export default function Footer() {
         <hr/>
         <div className='flex justify-center gap-10'>
           <div>
-            <p className='leading-[18.72px] text-[#FFFFFF]'> &copy; 2024 - OKAZ JEWELLRY</p>
+            <p className='leading-[18.72px] text-[#FFFFFF]'> &copy; {time} - OKAZ JEWELLRY</p>
           </div>
           <div>
             <p className='leading-[18.72px] text-[#FFFFFF]/30'>Terms  •  Privacy</p>
