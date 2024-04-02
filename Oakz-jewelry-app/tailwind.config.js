@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors:{
+        'ghost' : '#F5F5F5',
         'brownbg' : '#D76F30',
         'beige' : '#EFEFD0',
         'green' : '#172D13',
