@@ -5,6 +5,7 @@ import "./App.css";
 import ProductSection from "./components/productSection";
 import Hero from "./components/hero-section"
 import Footer from "./components/footer";
+import Choose from "./components/choose";
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
         <a href=""></a>
         <Hero/>
         <ProductSection />
+        <Choose/>
         <Footer/>
       </div>
     </>
