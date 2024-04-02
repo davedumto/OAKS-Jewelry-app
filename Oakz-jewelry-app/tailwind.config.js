@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily:{
+        bienvenido: ["Bienvenido", "sans-serif"],
+      },
+
       colors:{
         'brownbg' : '#D76F30',
         'beige' : '#EFEFD0',
