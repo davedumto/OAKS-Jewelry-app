@@ -33,26 +33,22 @@ const ProductSection = () => {
   }
 
   return (
-    <div className="flex flex-col w-full px-[48px] md:px-[64px] py-[64px] ">
+    <div className="flex flex-col w-full px-[3em] md:px-[4em] py-[4em] ">
       <div className="flex md:flex-col w-full mb-[2em] md:mb-0">
         <div className="flex flex-col w-[70%] items-start">
-          <h1 className="text-[32px] md:text-[48px] ">
+          <h1 className="text-[2em] md:text-[3em] ">
             <span className="text-orange-400 ">Dorn</span> yourself with our
             best sellers!
           </h1>
-          <h2 className="text-[16px] md:text-[32px]">
+          <h2 className="text-[1em] md:text-[2em]">
             It is our goal to make sure you look good for that occassion
           </h2>
         </div>
 
-        <div className="flex justify-center items-end md:py-[32px]">
-          {/*
-    Conditional rendering based on screen size.
-    Show dropdown on mobile and mini tablet devices (< 768px).
-  */}
+        <div className="flex justify-center items-end md:py-[2em]">
           {window.innerWidth < 768 ? (
             <select
-              className="text-white border-[3px] h-fit border-[#D76F30] p-[1px] rounded-[32px] bg-[#D76F30] md:w-[200px]"
+              className="text-white border-[0.1875em] h-fit border-[#D76F30] rounded-[2em] bg-[#D76F30] md:w-[12.5em]"
               onChange={(e) => handleSelectChange(e.target.value)}
             >
               {productList.map((product, index) => (
@@ -62,10 +58,10 @@ const ProductSection = () => {
               ))}
             </select>
           ) : (
-            <ul className="text-red-400 flex justify-around border-[3px] border-[#D76F30] p-[10px] rounded-[32px] bg-[#EFEFD0] w-[690px]">
+            <ul className="text-red-400 flex justify-around border-[0.1875em] border-[#D76F30] p-[0.625em] rounded-[2em] bg-[#EFEFD0] w-[42.68759em]">
               {productList.map((product, index) => (
                 <li
-                  className="text-[16px] cursor-pointer text-black active:bg-[#D76F30] active:text-white active:rounded-[32px] p-2 focus:bg-[#D76F30] focus:text-white focus:rounded-[32px] hover:bg-[#D76F30] hover:text-white hover:rounded-[32px]"
+                  className="text-[1em] cursor-pointer text-black active:bg-[#D76F30] active:text-white active:rounded-[2em] p-2 focus:bg-[#D76F30] focus:text-white focus:rounded-[2em] hover:bg-[#D76F30] hover:text-white hover:rounded-[2em]"
                   key={index}
                   onClick={() => handleListItemClick(product)}
                 >
@@ -90,13 +86,13 @@ const ProductSection = () => {
 
             <div className="flex flex-col w-full justify-around h-[50%] px-2">
               <div className="flex flex-col my-[0.5em] md:mt-[1.5em] md:mb-[2.5em] md:flex-row gap-[0.2em] justify-between w-full">
-                <p className="text-[14px]">{product.name}</p>
+                <p className="text-[0.875em]">{product.name}</p>
 
                 <p
                   className={
                     product.stock === "IN STOCK"
-                      ? "bg-[#D76F30] text-white text-[10px] rounded-2xl p-1 w-fit"
-                      : "bg-[#BB2929] text-white text-[8px] rounded-2xl p-1 w-fit"
+                      ? "bg-[#D76F30] text-white text-[0.625em] rounded-2xl p-1 w-fit"
+                      : "bg-[#BB2929] text-white text-[0.5em] rounded-2xl p-1 w-fit"
                   }
                 >
                   {product.stock}
@@ -107,13 +103,17 @@ const ProductSection = () => {
 
                 {product.stock === "IN STOCK" ? (
                   <a href="">
-                    <img src="/images/add.svg" className="h-[32px]" alt="" />
+                    <img
+                      src="/images/add.svg"
+                      className="h-[2em]"
+                      alt="in stock icon"
+                    />
                   </a>
                 ) : (
                   <img
                     src="/images/add.svg"
-                    className="h-[32px] opacity-50 cursor-not-allowed"
-                    alt=""
+                    className="h-[2em] opacity-50 cursor-not-allowed"
+                    alt=" in stock icon"
                   />
                 )}
               </div>
