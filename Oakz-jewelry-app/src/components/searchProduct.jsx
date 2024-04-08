@@ -149,7 +149,7 @@ const SearchProduct = () => {
             </div>
           </div>
           <div className="md:w-[31.25em] lg:w-[57.5em]  overflow-y-scroll">
-            <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 overflow-hidden">
+            <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 overflow-hidden px-[0.3em]">
               {productItems.map((product, index) => (
                 <div
                   key={index}
