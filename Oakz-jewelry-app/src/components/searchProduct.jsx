@@ -32,25 +32,7 @@ const SearchProduct = () => {
       )
     );
   };
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  let numItems;
-  if (windowWidth < 768) {
-    numItems = 4;
-  } else if (windowWidth < 1024) {
-    numItems = 8;
-  } else {
-    numItems = 10;
-  }
+ 
 
   return (
     <div>

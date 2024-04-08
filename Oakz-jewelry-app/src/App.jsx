@@ -11,7 +11,7 @@ import SearchProduct from "./components/searchProduct";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="font-bienvenido">
         <a href=""></a>
         <Routes>
           <Route path="/" element={

@@ -50,7 +50,7 @@ const ProductSection = () => {
         <div className="flex justify-center items-end md:py-[2em]">
           {window.innerWidth < 768 ? (
             <select
-              className="text-white border-[0.1875em] h-fit border-[#D76F30] rounded-[2em] bg-[#D76F30] md:w-[12.5em]"
+              className="text-white border-[0.1875em] h-fit border-brownbg rounded-[2em] bg-brownbg md:w-[12.5em]"
               onChange={(e) => handleSelectChange(e.target.value)}
             >
               {productList.map((product, index) => (
@@ -60,10 +60,10 @@ const ProductSection = () => {
               ))}
             </select>
           ) : (
-            <ul className="text-red-400 flex justify-around border-[0.1875em] border-[#D76F30] p-[0.625em] rounded-[2em] bg-[#EFEFD0] w-[42.68759em]">
+            <ul className="text-red-400 flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-[42.68759em]">
               {productList.map((product, index) => (
                 <li
-                  className="text-[1em] cursor-pointer text-black active:bg-[#D76F30] active:text-white active:rounded-[2em] p-2 focus:bg-[#D76F30] focus:text-white focus:rounded-[2em] hover:bg-[#D76F30] hover:text-white hover:rounded-[2em]"
+                  className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] p-2 focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
                   key={index}
                   onClick={() => handleListItemClick(product)}
                 >
@@ -78,7 +78,7 @@ const ProductSection = () => {
         {productItems.slice(0, numItems).map((product, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-[#EFEFD0] w-full h-fit "
+            className="flex flex-col items-center bg-beige w-full h-fit "
           >
             <img
               src={product.imgSrc}
@@ -93,8 +93,8 @@ const ProductSection = () => {
                 <p
                   className={
                     product.stock === "IN STOCK"
-                      ? "bg-[#D76F30] text-white text-[0.625em] rounded-2xl p-1 w-fit"
-                      : "bg-[#BB2929] text-white text-[0.5em] rounded-2xl p-1 w-fit"
+                      ? "bg-brownbg text-white text-[0.625em] rounded-2xl p-1 w-fit"
+                      : "bg-tomatoRed text-white text-[0.5em] rounded-2xl p-1 w-fit"
                   }
                 >
                   {product.stock}
