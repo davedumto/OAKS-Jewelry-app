@@ -13,16 +13,13 @@ const ProductSection = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Add event listener to update width when window is resized
     window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+  }, []);
 
-  // Calculate the number of items to display based on screen width
   let numItems;
   if (windowWidth < 768) {
     numItems = 4;
@@ -37,7 +34,7 @@ const ProductSection = () => {
   return (
     <div className="flex flex-col w-full px-[3em] md:px-[4em] py-[4em] ">
       <div className="flex md:flex-col w-full mb-[2em] md:mb-0">
-        <div className="flex flex-col w-[60%] items-start">
+        <div className="flex flex-col w-[60%] md:w-full items-start">
           <h1 className="text-[2em] md:text-[3em] ">
             <span className="text-orange-400 ">Dorn</span> yourself with our
             best sellers!
@@ -47,31 +44,29 @@ const ProductSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-end md:py-[2em] w-[40%]">
-     
-            <select
-              className="text-white flex md:hidden border-[0.1875em] h-fit border-brownbg rounded-[2em] bg-brownbg"
-              onChange={(e) => handleSelectChange(e.target.value)}
-            >
-              {productList.map((product, index) => (
-                <option className="text-[0.7em]" value={product} key={index}>
-                  {product}
-                </option>
-              ))}
-            </select>
-    
-            <ul className="hidden text-red-400 md:flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-fit">
-              {productList.map((product, index) => (
-                <li
-                  className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
-                  key={index}
-                  onClick={() => handleListItemClick(product)}
-                >
-                  {product}
-                </li>
-              ))}
-            </ul>
-     
+        <div className="flex justify-center items-end md:py-[2em] ">
+          <select
+            className="text-white flex md:hidden border-[0.1875em] w-[40%] h-fit border-brownbg rounded-[2em] bg-brownbg"
+            onChange={(e) => handleSelectChange(e.target.value)}
+          >
+            {productList.map((product, index) => (
+              <option className="text-[0.7em]" value={product} key={index}>
+                {product}
+              </option>
+            ))}
+          </select>
+
+          <ul className="hidden text-red-400 md:flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-fit">
+            {productList.map((product, index) => (
+              <li
+                className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
+                key={index}
+                onClick={() => handleListItemClick(product)}
+              >
+                {product}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
