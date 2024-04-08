@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import OAKZ_WHITE from "/images/OAKZ_white.svg";
@@ -6,7 +6,7 @@ import ArrowRoundedBack from "/images/mingcute.svg";
 import FilterImage from "/images/Filter.svg";
 import { LocalGroceryStoreOutlined, Search } from "@mui/icons-material";
 import { productPriceFilters, productNameFilters } from "../data/productFilter";
-import Footer from "./footer";
+import Footer from "../components/footer";
 import productItems from "../data/productItem";
 
 const SearchProduct = () => {
@@ -32,7 +32,6 @@ const SearchProduct = () => {
       )
     );
   };
- 
 
   return (
     <div>
@@ -60,7 +59,7 @@ const SearchProduct = () => {
             <LocalGroceryStoreOutlined />
           </div>
         </header>
-        <div className="flex justify-between items-center bg-[#EFEFD0] md:gap-[5em] p-3">
+        <div className="flex justify-between items-center bg-beige md:gap-[5em] p-3">
           <p className="text-[1em] md:text-[1.5em] leading-[0] font-normal">
             Search Products
           </p>
@@ -138,7 +137,7 @@ const SearchProduct = () => {
               {productItems.map((product, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center bg-[#EFEFD0] w-full h-fit "
+                  className="flex flex-col items-center bg-beige w-full h-fit "
                 >
                   <img
                     src={product.imgSrc}
@@ -153,8 +152,8 @@ const SearchProduct = () => {
                       <p
                         className={
                           product.stock === "IN STOCK"
-                            ? "bg-[#D76F30] text-white text-[0.625em] rounded-2xl p-1 w-fit"
-                            : "bg-[#BB2929] text-white text-[0.5em] rounded-2xl p-1 w-fit"
+                            ? "bg-brownbg text-white text-[0.625em] rounded-2xl p-1 w-fit"
+                            : "bg-tomatoRed text-white text-[0.5em] rounded-2xl p-1 w-fit"
                         }
                       >
                         {product.stock}

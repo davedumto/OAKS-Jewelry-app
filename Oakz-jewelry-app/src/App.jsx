@@ -6,7 +6,7 @@ import ProductSection from "./components/productSection";
 import Hero from "./components/hero-section";
 import Footer from "./components/footer";
 import Choose from "./components/choose";
-import SearchProduct from "./components/searchProduct";
+import SearchProduct from "./pages/searchProduct";
 
 function App() {
   return (
@@ -14,14 +14,17 @@ function App() {
       <div className="font-bienvenido">
         <a href=""></a>
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <ProductSection />
-              <Choose />
-              <Footer />
-            </>
-          }/>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <ProductSection />
+                <Choose />
+                <Footer />
+              </>
+            }
+          />
           <Route path="/searchproduct" element={<SearchProduct />} />
         </Routes>
       </div>

@@ -8,21 +8,17 @@ const ProductSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // Function to update window width state
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    // Add event listener to update width when window is resized
     window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []); // Empty dependency array ensures the effect runs only once on mount
+  }, []);
 
-  // Calculate the number of items to display based on screen width
   let numItems;
   if (windowWidth < 768) {
     numItems = 4;
@@ -37,7 +33,7 @@ const ProductSection = () => {
   return (
     <div className="flex flex-col w-full px-[3em] md:px-[4em] py-[4em] ">
       <div className="flex md:flex-col w-full mb-[2em] md:mb-0">
-        <div className="flex flex-col w-[70%] items-start">
+        <div className="flex flex-col w-[60%] md:w-full items-start">
           <h1 className="text-[2em] md:text-[3em] ">
             <span className="text-orange-400 ">Dorn</span> yourself with our
             best sellers!
@@ -47,31 +43,29 @@ const ProductSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-end md:py-[2em]">
-          {window.innerWidth < 768 ? (
-            <select
-              className="text-white border-[0.1875em] h-fit border-brownbg rounded-[2em] bg-brownbg md:w-[12.5em]"
-              onChange={(e) => handleSelectChange(e.target.value)}
-            >
-              {productList.map((product, index) => (
-                <option className="" value={product} key={index}>
-                  {product}
-                </option>
-              ))}
-            </select>
-          ) : (
-            <ul className="text-red-400 flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-[42.68759em]">
-              {productList.map((product, index) => (
-                <li
-                  className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] p-2 focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
-                  key={index}
-                  onClick={() => handleListItemClick(product)}
-                >
-                  {product}
-                </li>
-              ))}
-            </ul>
-          )}
+        <div className="flex justify-center items-end md:py-[2em] ">
+          <select
+            className="text-white flex md:hidden border-[0.1875em] w-[40%] h-fit border-brownbg rounded-[2em] bg-brownbg"
+            onChange={(e) => handleSelectChange(e.target.value)}
+          >
+            {productList.map((product, index) => (
+              <option className="text-[0.7em]" value={product} key={index}>
+                {product}
+              </option>
+            ))}
+          </select>
+
+          <ul className="hidden text-red-400 md:flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-fit">
+            {productList.map((product, index) => (
+              <li
+                className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
+                key={index}
+                onClick={() => handleListItemClick(product)}
+              >
+                {product}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
@@ -93,14 +87,14 @@ const ProductSection = () => {
                 <p
                   className={
                     product.stock === "IN STOCK"
-                      ? "bg-brownbg text-white text-[0.625em] rounded-2xl p-1 w-fit"
-                      : "bg-tomatoRed text-white text-[0.5em] rounded-2xl p-1 w-fit"
+                      ? "bg-brownbg flex items-center text-white text-[0.625em] rounded-2xl p-1 w-fit"
+                      : "bg-tomatoRed flex items-center text-white text-[0.5em] rounded-2xl p-1 w-fit"
                   }
                 >
                   {product.stock}
                 </p>
               </div>
-              <div className="flex justify-between w-full mb-[0.5em]">
+              <div className="flex justify-between w-full mb-[0.5em] font-normal">
                 <p>NGN: {product.price}</p>
 
                 {product.stock === "IN STOCK" ? (
@@ -124,7 +118,7 @@ const ProductSection = () => {
         ))}
       </div>
       <Link to="/searchproduct">
-        <p className="flex justify-end">
+        <p className="flex justify-end py-2 text-[1.2em]">
           see more{" "}
           <span>
             <ArrowRight />

@@ -1,6 +1,4 @@
-// src/data/products.js
 
-// Define an array containing product categories
 const productList = [
   "Necklaces",
   "Rings",
@@ -10,5 +8,5 @@ const productList = [
   "Bracelets",
 ];
 
-// Export the array
+
 export default productList;
