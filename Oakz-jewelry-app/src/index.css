@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* width */
+
+/* styles.css */
+@font-face {
+  font-family: "Bienvenido";
+  src: url("/public/fonts/Bienvenido.ttf") format("truetype");
+  /* Add other font properties like font-weight and font-style if needed */
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
