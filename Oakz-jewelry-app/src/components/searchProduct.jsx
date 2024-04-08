@@ -148,7 +148,7 @@ const SearchProduct = () => {
 
                   <div className="flex flex-col w-full justify-around h-[50%] px-2">
                     <div className="flex flex-col my-[0.5em] lg:mt-[1.5em] lg:mb-[2.5em] lg:flex-row gap-[0.2em] justify-between w-full">
-                      <p className="text-[0.875em]">{product.name}</p>
+                      <p className="text-[1em]">{product.name}</p>
 
                       <p
                         className={
