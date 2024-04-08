@@ -1,23 +1,31 @@
 import { useState } from "react";
-
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ProductSection from "./components/productSection";
-import Hero from "./components/hero-section"
+import Hero from "./components/hero-section";
 import Footer from "./components/footer";
 import Choose from "./components/choose";
-function App() {
+import SearchProduct from "./components/searchProduct";
 
+function App() {
   return (
-    <>
+    <Router>
       <div>
         <a href=""></a>
-        <Hero/>
-        <ProductSection />
-        <Choose/>
-        <Footer/>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <ProductSection />
+              <Choose />
+              <Footer />
+            </>
+          }/>
+          <Route path="/searchproduct" element={<SearchProduct />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 
