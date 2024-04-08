@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 import OAKZ_WHITE from "/images/OAKZ_white.svg";
@@ -6,7 +6,7 @@ import ArrowRoundedBack from "/images/mingcute.svg";
 import FilterImage from "/images/Filter.svg";
 import { LocalGroceryStoreOutlined, Search } from "@mui/icons-material";
 import { productPriceFilters, productNameFilters } from "../data/productFilter";
-import Footer from "./footer";
+import Footer from "../components/footer";
 import productItems from "../data/productItem";
 
 const SearchProduct = () => {
@@ -32,7 +32,6 @@ const SearchProduct = () => {
       )
     );
   };
- 
 
   return (
     <div>

@@ -8,7 +8,6 @@ const ProductSection = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    // Function to update window width state
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
