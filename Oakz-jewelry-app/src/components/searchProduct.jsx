@@ -56,7 +56,11 @@ const SearchProduct = () => {
     <div>
       <div className=" px-[2em] md:px-[3em]">
         <header className="flex justify-between items-end mt-[1em] mb-[1em]">
-          <img src={OAKZ_WHITE} alt=" logo icon" className="w-[6em] md:w-auto" />
+          <img
+            src={OAKZ_WHITE}
+            alt=" logo icon"
+            className="w-[6em] md:w-auto"
+          />
           <div className="flex gap-[1em] items-center">
             <div className="md:hidden py-[0.125em] h-[2.125em]  flex-row gap-1 hover:cursor-text rounded-[3.125em] bg-transparent border-[1.5px] border-green focus-within:border-green focus-within:border active:border-green items-center relative">
               <input
@@ -98,7 +102,6 @@ const SearchProduct = () => {
               <img
                 src={ArrowRoundedBack}
                 alt="go back arrow icon"
-       
                 className="h-[0.9em] flex"
               />
               <p className="hidden md:inline-block"> Go&nbsp;Back</p>
@@ -148,8 +151,8 @@ const SearchProduct = () => {
               </ul>
             </div>
           </div>
-          <div className="md:w-[31.25em] lg:w-[57.5em]  overflow-y-scroll">
-            <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 overflow-hidden px-[0.3em]">
+          <div className="md:w-[31.25em] lg:w-[44em] xl:w-[57.5em]  overflow-y-scroll">
+            <div className="grid justify-center  grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 overflow-hidden px-[0.3em]">
               {productItems.map((product, index) => (
                 <div
                   key={index}
@@ -162,7 +165,7 @@ const SearchProduct = () => {
                   />
 
                   <div className="flex flex-col w-full justify-around h-[50%] px-2">
-                    <div className="flex flex-col my-[0.5em] lg :mt-[1.5em] lg :mb-[2.5em] lg :flex-row gap-[0.2em] justify-between w-full">
+                    <div className="flex flex-col my-[0.5em] lg:mt-[1.5em] lg:mb-[2.5em] lg:flex-row gap-[0.2em] justify-between w-full">
                       <p className="text-[0.875em]">{product.name}</p>
 
                       <p

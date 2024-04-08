@@ -27,6 +27,8 @@ const ProductSection = () => {
   if (windowWidth < 768) {
     numItems = 4;
   } else if (windowWidth < 1024) {
+    numItems = 6;
+  } else if (windowWidth < 1280) {
     numItems = 8;
   } else {
     numItems = 10;
@@ -72,7 +74,7 @@ const ProductSection = () => {
           )}
         </div>
       </div>
-      <div className="grid justify-center  grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {productItems.slice(0, numItems).map((product, index) => (
           <div
             key={index}
