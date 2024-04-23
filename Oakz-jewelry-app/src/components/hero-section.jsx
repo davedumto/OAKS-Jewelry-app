@@ -7,12 +7,15 @@ import heroDisplay3 from "./../../public/images/hero display 3.png";
 import heroDisplay4 from "./../../public/images/hero display 4.png";
 import heroDisplay5 from "./../../public/images/hero display 5.png";
 import "./hero.css";
+import Navbar from "./navbar";
 
 
 function Hero() {
   return (
     <div className="hero-section bg-beige p-4 h-[1024px]">
         <div className="bg-brownish rounded-xl py-10 px-[150px] h-[979px]">
+      <Navbar/>
+
       <div className="sub-hero flex flex-col md:flex-row justify-between  items-center">
         <div className="mb-4 md:mb-0 w-full">
           <div className="items-center">

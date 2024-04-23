@@ -1,21 +1,34 @@
 import { useState } from "react";
-
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import ProductSection from "./components/productSection";
-import Hero from "./components/hero-section"
+import Hero from "./components/hero-section";
+import Footer from "./components/footer";
+import Choose from "./components/choose";
+import SearchProduct from "./pages/searchProduct";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
+    <Router>
+      <div className="font-bienvenido">
         <a href=""></a>
-        <Hero/>
-        <ProductSection />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <ProductSection />
+                <Choose />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/searchproduct" element={<SearchProduct />} />
+        </Routes>
       </div>
-    </>
+    </Router>
   );
 }
 
