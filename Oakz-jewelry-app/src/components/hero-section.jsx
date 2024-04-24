@@ -8,6 +8,7 @@ import heroDisplay4 from "./../../public/images/hero display 4.png";
 import heroDisplay5 from "./../../public/images/hero display 5.png";
 import "./hero.css";
 import Navbar from "./navbar";
+import HeroImages from "./HeroImages"; // Importing the HeroImages component
 
 function Hero() {
   return (
@@ -32,11 +33,11 @@ function Hero() {
               </button>
             </div>
           </div>
-          <div className=" relative w-full h-full flex justify-end items-center">
+          <div className=" relative w-full h-full flex  items-center">
             <img
               src={splatter}
               alt=""
-              className="max-w-[80%]  max-h-[80%] object-cover "
+              className="max-w-[80%] mx-auto max-h-[80%] object-cover "
             />
             <img
               src={neckstand}
@@ -45,43 +46,11 @@ function Hero() {
             />
           </div>
         </div>
-        <div className="hidden md:flex w-[80%] pt-[2em] pb-[4em] justify-between  ">
-          <span>
-            <img
-              src={heroDisplay1}
-              alt=""
-              className="rounded-xl border-4 border-orange-400 "
-            />
-          </span>
-          <span>
-            <img
-              src={heroDisplay2}
-              alt=""
-              className="rounded-xl border-4 border-orange-400"
-            />
-          </span>
-          <span>
-            <img
-              src={heroDisplay3}
-              alt=""
-              className="rounded-xl border-4 border-orange-400"
-            />
-          </span>
-          <span>
-            <img
-              src={heroDisplay4}
-              alt=""
-              className="rounded-xl border-4 border-orange-400"
-            />
-          </span>
-          <span>
-            <img
-              src={heroDisplay5}
-              alt=""
-              className="rounded-xl border-4 border-black "
-            />
-          </span>
-        </div>
+
+        {/* Using the HeroImages component to display hero images */}
+        <HeroImages
+          images={[heroDisplay1, heroDisplay2, heroDisplay3, heroDisplay4]}
+        />
       </div>
     </div>
   );
