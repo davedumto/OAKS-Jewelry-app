@@ -38,7 +38,7 @@ function Hero() {
               src={splatter}
               alt=""
               className="max-w-[80%] mx-auto max-h-[80%] object-cover "
-            />
+            /> 
             <img
               src={neckstand}
               alt=""
