@@ -50,11 +50,51 @@ const Checkout = () => {
         </div>
       </div>
       <div className="flex gap-[2em] w-full justify-between">
-        <div className="shadow-2xl flex-1 border-black border-2"><h1>
-            Your Items are</h1></div>
-        <div className="shadow-2xl flex-1 border-black border-2">
-          <div></div>
-          <div></div>
+        <div className="shadow-2xl">
+          <p>Your Items are</p>
+          <ul>
+            <li>
+              {" "}
+              <span>Golden Necklace</span>
+              <span>x2</span>
+              <span>50,000.00</span>
+            </li>
+            <li>
+              {" "}
+              <span>Slim Silver Necklace</span>
+              <span>x4</span>
+              <span>48,000.00</span>
+            </li>
+          </ul>
+          <hr />
+          <p>
+            Total <span>98,000.00</span>
+          </p>
+        </div>
+        <div className="flex shadow-2xl flex-1 gap-[0.5em] justify-between  ">
+          <div className="flex flex-col justify-between">
+            <p>Input your details for identification</p>
+            <button className="w-full bg-[#172D13]">Confirm details</button>
+          </div>
+          <div className="w-[1px] h-80% bg-black"></div>
+          <div>
+            <p>Transfer to the account bellow </p>
+            <div>
+              <ul>
+                <li className="flex justify-between">
+                  <span>Account Name:</span>
+                  <span>OKAZ Stores</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Account Number:</span> <span>12345678</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>Bank Name:</span>
+                  <span>MoniePoint</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
