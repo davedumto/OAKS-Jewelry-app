@@ -31,9 +31,9 @@ const ProductSection = () => {
   }
 
   return (
-    <div className="flex flex-col w-full px-[3em] md:px-[4em] py-[4em] ">
-      <div className="flex md:flex-col w-full mb-[2em] md:mb-0">
-        <div className="flex flex-col w-[60%] md:w-full items-start">
+    <div className="flex flex-col w-full px-[2em] md:px-[4em] py-[4em] ">
+      <div className="flex gap-[0.3em] md:flex-col w-full mb-[2em] md:mb-0">
+        <div className="flex flex-col  md:w-full items-start">
           <h1 className="text-[2em] md:text-[3em] ">
             <span className="text-orange-400 ">Dorn</span> yourself with our
             best sellers!
@@ -43,9 +43,9 @@ const ProductSection = () => {
           </h2>
         </div>
 
-        <div className="flex justify-center items-end md:py-[2em] ">
+        <div className="flex justify-center  items-end md:py-[2em] ">
           <select
-            className="text-white flex md:hidden border-[0.1875em] w-[40%] h-fit border-brownbg rounded-[2em] bg-brownbg"
+            className="text-white flex md:hidden border-[0.1875em]  h-fit border-brownbg rounded-[2em] bg-brownbg"
             onChange={(e) => handleSelectChange(e.target.value)}
           >
             {productList.map((product, index) => (
