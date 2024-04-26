@@ -126,7 +126,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
-  }, {
+  }, 
+  {
     imgSrc: "/images/ring1.jpeg",
     name: "Rose Roast Rings",
     stock: "IN STOCK",
