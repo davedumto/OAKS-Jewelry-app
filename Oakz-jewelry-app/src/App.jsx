@@ -7,6 +7,7 @@ import Hero from "./components/hero-section";
 import Footer from "./components/footer";
 import Choose from "./components/choose";
 import SearchProduct from "./pages/searchProduct";
+import Cart from "./pages/cart";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             }
           />
           <Route path="/searchproduct" element={<SearchProduct />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>
