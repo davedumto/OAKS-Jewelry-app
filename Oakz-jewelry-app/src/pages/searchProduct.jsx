@@ -8,8 +8,15 @@ import { LocalGroceryStoreOutlined, Search } from "@mui/icons-material";
 import { productPriceFilters, productNameFilters } from "../data/productFilter";
 import Footer from "../components/footer";
 import productItems from "../data/productItem";
+import Popup from './Popups';
+
+
+
 
 const SearchProduct = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => setIsOpen(!isOpen);
   const [nameFilters, setNameFilters] = useState(productNameFilters);
   const [priceFilters, setPriceFilters] = useState(productPriceFilters);
 
@@ -163,13 +170,9 @@ const SearchProduct = () => {
                       <p>NGN: {product.price}</p>
 
                       {product.stock === "IN STOCK" ? (
-                        <a href="">
-                          <img
-                            src="/images/add.svg"
-                            className="h-[2em]"
-                            alt="in stock icon"
-                          />
-                        </a>
+                        <a href="#" onClick={(e) => { e.preventDefault(); togglePopup(); }} className="cursor-pointer">
+                        <img src="/images/add.svg" className="h-[2em]" alt="in stock icon"/>
+                      </a>
                       ) : (
                         <img
                           src="/images/add.svg"
@@ -185,6 +188,11 @@ const SearchProduct = () => {
           </div>
         </div>
       </div>
+
+      {/* Popup content below  */}
+
+      <Popup isOpen={isOpen} onClose={togglePopup}/>
+    
       <Footer />
     </div>
   );

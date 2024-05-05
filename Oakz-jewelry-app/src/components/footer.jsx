@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     
     <>
-    <div className='w-full py-5 px-6 font-bienvenido bg-green flex flex-col gap-3'>
+    <div className='w-full py-5 px-6 font-bienvenido bg-green flex flex-col gap-3 '>
         <div className='flex flex-col justify-between gap-2 w-full px-4 background'>
           <div className=' '>
               <div className="flex flex-row justify-between pt-2">
