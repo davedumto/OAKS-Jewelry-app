@@ -64,8 +64,7 @@ const CartPage = () => {
           </li>
         ))} */}
       </ul> 
-      <h2 className="text-2xl font-bold my-4">Cart Items</h2>
-      <ul className="flex flex-col gap-5 w-full">
+      <ul className="flex flex-col gap-5 w-full px-6">
         {cartItems.map((item) => (
           <li key={item.id} className="bg-[#FEFEFE] w-full flex flex-row justify-between border py-3 px-8 rounded-md font-bienvenido text-green">
             <div className='flex gap-4'>
@@ -87,15 +86,18 @@ const CartPage = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='flex flex-col gap-5'>
               <button className='px-3 py-1 rounded-2xl border border-green'>View product</button>
-              <div>Total: ${item.price * item.quantity}</div>
+              <div>Price: <br/> NGN:{item.price * item.quantity}</div>
             </div>
           </li>
         ))}
       </ul>
-      <div className="mt-4">
-        <strong className="text-2xl">Total Price: ${totalPrice}</strong>
+      <div className="mt-4 flex justify-end px-6">
+        <div className='flex flex-col gap-3'>
+          <h3 className="text-3xl font-bienvenido text-green">Total : {totalPrice}</h3>
+          <button className='px-3 py-1 rounded-2xl bg-green text-white w-full'>CHECKOUT</button>
+        </div>
       </div>
     </div>
   );
