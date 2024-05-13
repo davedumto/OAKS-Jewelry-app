@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import Choose from "./components/choose";
 import SearchProduct from "./pages/searchProduct";
 import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           />
           <Route path="/searchproduct" element={<SearchProduct />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
     </Router>
