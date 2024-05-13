@@ -14,9 +14,9 @@ export default function Footer() {
     
     <>
     <div className='w-full py-5 px-6 font-bienvenido bg-green flex flex-col gap-3 '>
-        <div className='flex flex-col justify-between gap-2 w-full px-4 background'>
-          <div className=' '>
-              <div className="flex flex-row justify-between pt-2">
+        <div className='flex flex-col justify-between sm:gap-2 gap-12 w-full px-4 background'>
+          <div className=' flex flex-col gap-3 '>
+              <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-0 pt-2">
                   <div className='flex flex-col gap-2'>
                   <span className='text-6xl text-brownbg  font-normal'>
                   <img src={Oakz} alt="" />
@@ -37,7 +37,7 @@ export default function Footer() {
                     </div>
                   </div>
               </div>
-              <div className='flex flex-row  justify-end gap-2 items-center pt-2'>
+              <div className='flex flex-row sm:justify-end gap-2 items-center pt-2'>
                   <button className='bg-beige py-2 px-2 w-[180px] rounded-3xl flex justify-center items-center'><a href='mailto:nnamaninwanne@gmail.com'><span className='px-1 leading-3'><MailIcon fontSize='small'/></ span >mail@gmail.com</a></button>
                   <button className='bg-beige rounded-[50%] px-2 py-[6px]'>
                     <a><PhoneEnabledOutlinedIcon fontSize='small'/></a>
@@ -48,12 +48,12 @@ export default function Footer() {
               </div>
           </div>
           <hr/>
-          <div className='flex justify-center gap-10'>
+          <div className='flex justify-between sm:justify-center gap-10'>
             <div>
-              <p className='leading-[18.72px] text-[#FFFFFF]'> &copy; {time} - OKAZ JEWELLRY</p>
+              <p className='flex text-sm sm:text-md leading-[18.72px] text-[#FFFFFF]'> &copy; {time} - OKAZ JEWELLRY</p>
             </div>
             <div>
-              <p className='leading-[18.72px] text-[#FFFFFF]/30'><a className='hover:underline' href="">Terms</a>  •  <a className='hover:underline'  href="">Privacy</a></p>
+              <p className='flex gap-2 leading-[18.72px] text-[#FFFFFF]/30'><a className='hover:underline' href="">Terms</a>  •  <a className='hover:underline'  href="">Privacy</a></p>
             </div>
           </div>
         </div>
