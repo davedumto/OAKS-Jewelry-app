@@ -154,7 +154,7 @@ const Checkout = () => {
                       htmlFor="file-upload"
                       className="cursor-pointer block "
                     >
-                      <div className="flex flex-col bg-[#04020012] border-2 border-dashed border-gray-300 px-4 py-1 rounded-lg w-64 mx-auto">
+                      <div className="flex flex-col  bg-[#04020012] border-2 border-dashed border-gray-300 px-4 py-1 rounded-lg w-64 mx-auto">
                         <div className="flex">
                           <div className="text-gray-b ">
                             <AddCircleOutline className="text-2xl" />
