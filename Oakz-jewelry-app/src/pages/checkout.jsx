@@ -26,10 +26,10 @@ const Checkout = () => {
     }
   };
   return (
-    <div>
-      <div className="flex flex-col gap-[2em] px-[2em] py-[1.5em] md:px-[3em] h-screen">
+    <div className="flex flex-col gap-[5em]">
+      <div className="flex flex-col gap-[3em] px-[2em] py-[1.5em] md:px-[3em] ">
         <div>
-          <header className="flex justify-between items-end mt-[1em] mb-[1em]">
+          <header className="flex justify-between items-end my-[1em]">
             <img
               src={OAKZ_WHITE}
               alt=" logo icon"
@@ -70,35 +70,39 @@ const Checkout = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-[2em] w-full justify-between flex-1">
-          <div className="flex flex-col shadow-2xl p-[1em] w-[35%] h-full">
-            <div className="flex flex-col flex-1">
+        <div className="flex gap-[2em] w-full justify-between  ">
+          <div className="flex flex-col shadow-2xl pt-[1em] pb-[2em] px-[1em]  w-[35%]">
+            <div className="flex flex-col flex-1 gap-[2em]">
               <p className="text-[2em] font-normal">Your Items are</p>
               <ul className="text-[1em] flex-1">
-                <li className="flex  justify-between">
+                <li className="grid grid-cols-5">
                   {" "}
-                  <span>Golden Necklace</span>
-                  <span>x2</span>
-                  <span>50,000.00</span>
+                  <span className="flex justify-start col-span-2">
+                    Golden Necklace
+                  </span>
+                  <span className="flex justify-end">x2</span>
+                  <span className="flex justify-end col-span-2">50,000.00</span>
                 </li>
-                <li className="flex  justify-between">
+                <li className="grid grid-cols-5">
                   {" "}
-                  <span>Slim Silver Necklace</span>
-                  <span>x4</span>
-                  <span>48,000.00</span>
+                  <span className="flex justify-start col-span-2">
+                    Slim Silver Necklace
+                  </span>
+                  <span className="flex justify-end">x4</span>
+                  <span className="flex justify-end col-span-2">48,000.00</span>
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col ">
-              <hr />
-              <p className="flex w-full justify-end">
-                Total: <span> 98,000.00</span>
+            <div className="flex flex-col gap-1">
+              <div className="w-full h-[1px] bg-[#5252524D]"></div>
+              <p className="flex w-full gap-2 justify-end">
+                Total:<span>98,000.00</span>
               </p>
             </div>
           </div>
           <div className="flex shadow-2xl flex-1 gap-[0.5em] justify-between  ">
-            <div className="flex flex-col justify-between flex-1 pt-[2em]  pb-[4em] ">
-              <div className="flex flex-col gap-[1em] border-r-[1px] border-black px-[1.5em] ">
+            <div className="flex flex-col justify-between flex-1 pt-[2em]  pb-[2em] ">
+              <div className="flex flex-col gap-[1em] border-r-[1px] border-[#5252524D] px-[1.5em] justify-between">
                 {" "}
                 <p className="text-[2em] leading-9 ">
                   Input your details for identification
@@ -107,7 +111,7 @@ const Checkout = () => {
                   {fields.map((field, index) => (
                     <div
                       key={index}
-                      className="w-full border-[1px] rounded-lg border-black p-2"
+                      className="w-full border-[1px] rounded-lg border-black p-2 leading-5"
                     >
                       <p>{field.label}</p>
                       <input
@@ -117,56 +121,71 @@ const Checkout = () => {
                       />
                     </div>
                   ))}
-                  <button className="w-full bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
-                    Confirm details
-                  </button>
                 </div>
+                <button className="w-full bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
+                  Confirm details
+                </button>
               </div>
             </div>
 
-            <div className="flex-1 px-[1.5em] pt-[2em]  pb-[4em] ">
-              <p>Transfer to the account bellow </p>
-              <div>
-                <ul>
-                  <li className="flex justify-between">
-                    <span>Account Name:</span>
-                    <span>OKAZ Stores</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Account Number:</span> <span>12345678</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Bank Name:</span>
-                    <span>MoniePoint</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="mb-4">
-                  <label htmlFor="file-upload" className="cursor-pointer block">
-                    <div className="flex border-2 border-dashed border-gray-300 p-4 rounded-lg w-64 mx-auto">
-                      <div className="border-[1px] border-black rounded-[50%] ">
-                        {file && (
-                          <p className="text-gray-700 w-[2em] overflow-hidden overflow-ellipsis whitespace-nowrap p-1">
-                            {file.name}
-                          </p>
-                        )}
-                      </div>{" "}
-                      <div className="text-gray-b ">
-                        <AddCircleOutline className="text-2xl"/>
-                      </div>
-                    </div>
-                  </label>
-                  <input
-                    id="file-upload"
-                    type="file"
-                    accept="image/*,.pdf"
-                    className="hidden"
-                    onChange={handleFileChange}
-                  />
+            <div className="flex flex-col flex-1 px-[1.5em] pt-[2em]  pb-[2em] justify-between">
+              <div className="flex flex-col gap-[2em]">
+                <p className="text-[2em] leading-9">
+                  Transfer to the account bellow{" "}
+                </p>
+                <div>
+                  <ul>
+                    <li className="flex justify-between">
+                      <span>Account Name:</span>
+                      <span>OKAZ Stores</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Account Number:</span> <span>12345678</span>
+                    </li>
+                    <li className="flex justify-between">
+                      <span>Bank Name:</span>
+                      <span>MoniePoint</span>
+                    </li>
+                  </ul>
                 </div>
-
-                <p className="text-sm text-gray-500">Upload proof of payment</p>
+                <div className="text-center">
+                  <div>
+                    <label
+                      htmlFor="file-upload"
+                      className="cursor-pointer block "
+                    >
+                      <div className="flex flex-col  bg-[#04020012] border-2 border-dashed border-gray-300 px-4 py-1 rounded-lg w-64 mx-auto">
+                        <div className="flex">
+                          <div className="text-gray-b ">
+                            <AddCircleOutline className="text-2xl" />
+                          </div>
+                          <div className=" ">
+                            {file && (
+                              <p className="text-gray-700 w-[2em] overflow-hidden overflow-ellipsis whitespace-nowrap p-1">
+                                {file.name}
+                              </p>
+                            )}
+                          </div>{" "}
+                        </div>
+                        <p className="text-sm text-gray-500">
+                          Upload proof of payment
+                        </p>
+                      </div>
+                    </label>
+                    <input
+                      id="file-upload"
+                      type="file"
+                      accept="image/*,.pdf"
+                      className="hidden"
+                      onChange={handleFileChange}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button className="w-full bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
+                  Continue
+                </button>
               </div>
             </div>
           </div>
