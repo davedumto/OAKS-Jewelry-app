@@ -4,7 +4,9 @@ import productList from "../data/productList";
 import productItems from "../data/productItem";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 
+import { useCart } from "../CartContext"; // Import useCart hook
 const ProductSection = () => {
+  const { addToCart } = useCart();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -98,11 +100,15 @@ const ProductSection = () => {
                 <p>NGN: {product.price}</p>
 
                 {product.stock === "IN STOCK" ? (
-                  <a href="">
+                  <a >
                     <img
                       src="/images/add.svg"
                       className="h-[2em]"
                       alt="in stock icon"
+                      onClick={() => {
+                        addToCart(product);
+                      
+                      }}
                     />
                   </a>
                 ) : (

@@ -122,7 +122,7 @@ const Checkout = () => {
                     </div>
                   ))}
                 </div>
-                <button className="w-full bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
+                <button className="w-full bg-[#172D13] hover:bg-[#2e5a26] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
                   Confirm details
                 </button>
               </div>
@@ -183,7 +183,7 @@ const Checkout = () => {
                 </div>
               </div>
               <div>
-                <button className="w-full bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
+                <button className="w-full hover:bg-[#2e5a26] bg-[#172D13] mt-[0.5em] text-white p-2 rounded-lg cursor-pointer">
                   Continue
                 </button>
               </div>
