@@ -87,7 +87,7 @@ const CartPage = () => {
               </div>
             </div>
             <div className='flex flex-col gap-5'>
-              <button className='px-3 py-1 rounded-2xl border border-green'>View product</button>
+              <button className='px-3 py-1 rounded-2xl border border-green hover:text-white hover:bg-green'>View product</button>
               <div>Price: <br/> NGN:{item.price * item.quantity}</div>
             </div>
           </li>
