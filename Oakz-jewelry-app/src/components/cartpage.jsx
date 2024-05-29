@@ -86,15 +86,9 @@ const CartPage = () => {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className='flex flex-col gap-5'>
-              <button className='px-3 py-1 rounded-2xl border border-green hover:text-white hover:bg-green'>View product</button>
-              <div>Price: <br/> NGN:{item.price * item.quantity}</div>
-=======
             <div className='flex sm:flex-col flex-row gap-5'>
               <button className='px-3 sm:py-1 py-0 h-5 sm:h-7 rounded-2xl border sm:text-md text-[12px] border-green'>View product</button>
               <div className='sm:text-md text-[12px]'>Price: <br/> NGN:{item.price * item.quantity}</div>
->>>>>>> 58d389f71dd115ffcdd3bec57c87f8d0c174e686
             </div>
           </li>
         ))}
