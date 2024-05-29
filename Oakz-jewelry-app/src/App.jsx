@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import viteLogo from "/vite.svg";
+
 import "./App.css";
 import ProductSection from "./components/productSection";
+import { CartProvider } from './CartContext';
 import Hero from "./components/hero-section";
 import Footer from "./components/footer";
 import Choose from "./components/choose";
@@ -13,6 +14,7 @@ import Checkout from "./pages/checkout";
 function App() {
   return (
     <Router>
+      <CartProvider>
       <div className="font-bienvenido">
         <a href=""></a>
         <Routes>
@@ -32,6 +34,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
       </div>
+      </CartProvider>
     </Router>
   );
 }
