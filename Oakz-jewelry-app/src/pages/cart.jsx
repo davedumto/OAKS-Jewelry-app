@@ -1,14 +1,14 @@
-import React from 'react'
-import Footer from '../components/footer'
+import React from 'react';
+import Footer from '../components/footer';
 import Oakz from '../../public/images/OAKZ(1).svg';
 import LocalGroceryStoreTwoToneIcon from '@mui/icons-material/LocalGroceryStoreTwoTone';
-import Return from '../../public/images/return-icon.svg'
+import Return from '../../public/images/return-icon.svg';
 import CartPage from '../components/cartpage';
 
 export default function Cart() {
   return (
     <>
-    <div className='h-screen sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
+      <div className='h-screen sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
         <div className='flex flex-col gap-[22px]'>
           <div className='flex justify-between items-center'>
             <img src={Oakz} alt="Oakz-logo" />
@@ -20,12 +20,11 @@ export default function Cart() {
               <span><img src={Return}/></span>
               <span className='sm:text-3xl text-2xl leading-[37.44px] text-green font-bienvenido'>Go back</span>
             </div>
-        </div>
+          </div>
         </div>
         <CartPage/>
-        
-    </div>
-    <Footer/>
+      </div>
+      <Footer/>
     </>
-  )
+  );
 }
