@@ -26,7 +26,7 @@ const Checkout = () => {
     }
   };
   return (
-    <div className="flex flex-col gap-[5em]">
+    <div className="flex flex-col gap-[5em] w-full">
       <div className="flex flex-col gap-[3em] px-[2em] py-[1.5em] md:px-[3em] ">
         <div>
           <header className="flex justify-between items-end my-[1em]">
@@ -70,8 +70,8 @@ const Checkout = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-[2em] w-full justify-between  ">
-          <div className="flex flex-col shadow-2xl pt-[1em] pb-[2em] px-[1em]  w-[35%]">
+        <div className="flex gap-[2em] flex-col w-full justify-between  ">
+          <div className="flex flex-col shadow-2xl pt-[1em] pb-[2em] px-[1em]  lg:w-[35%]">
             <div className="flex flex-col flex-1 gap-[2em]">
               <p className="text-[2em] font-normal">Your Items are</p>
               <ul className="text-[1em] flex-1">
