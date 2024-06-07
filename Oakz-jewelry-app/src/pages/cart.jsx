@@ -3,16 +3,19 @@ import Footer from '../components/footer';
 import Oakz from '../../public/images/OAKZ(1).svg';
 import LocalGroceryStoreTwoToneIcon from '@mui/icons-material/LocalGroceryStoreTwoTone';
 import Return from '../../public/images/return-icon.svg';
-import CartPage from '../components/cartpage';
+import CartPage2 from '../components/cartpage2';
 
 export default function Cart() {
+
   return (
     <>
       <div className='h-screen sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
         <div className='flex flex-col gap-[22px]'>
           <div className='flex justify-between items-center'>
             <img src={Oakz} alt="Oakz-logo" />
-            <span><LocalGroceryStoreTwoToneIcon fontSize='medium'/></span>
+            <span>
+              <LocalGroceryStoreTwoToneIcon fontSize="medium" />
+            </span>
           </div>
           <div className='bg-beige py-3 sm:px-8 px-6 flex justify-between items-center'>
             <p className='font-bienvenido sm:text-3xl text-2xl leading-[37.44px]'>Cart</p>
@@ -22,7 +25,7 @@ export default function Cart() {
             </div>
           </div>
         </div>
-        <CartPage/>
+        <CartPage2/>
       </div>
       <Footer/>
     </>

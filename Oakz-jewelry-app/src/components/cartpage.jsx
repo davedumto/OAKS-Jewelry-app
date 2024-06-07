@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import productItems from '../data/productItem';
 
-// const productItems = [
-//   {
-//     imgSrc: "/images/ring1.jpeg",
-//     name: "Rose Roast Rings",
-//     stock: "IN STOCK",
-//     price: 2500,
-//   },
-//   {
-//     imgSrc: "/images/ring2.jpeg",
-//     name: "Golden Bliss Rings",
-//     stock: "IN STOCK",
-//     price: 5500,
-//   },
-// ];
+
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([

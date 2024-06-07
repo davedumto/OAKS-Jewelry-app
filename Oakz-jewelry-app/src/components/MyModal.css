@@ -1,0 +1,31 @@
+/* src/styles.css or src/App.css */
+
+.react-modal-overlay {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .react-modal-overlay_after-open {
+    opacity: 1;
+  }
+  
+  .react-modal-overlay_before-close {
+    opacity: 0;
+  }
+  
+  .react-modal-content {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .react-modal-content_after-open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .react-modal-content_before-close {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  
