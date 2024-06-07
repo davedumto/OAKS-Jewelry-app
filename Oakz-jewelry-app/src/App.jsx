@@ -16,7 +16,7 @@ function App() {
   return (
     <Router>
       <CartProvider>
-        <div className="font-bienvenido">
+        <div className="font-bienvenido ">
           <a href=""></a>
           <Routes>
             <Route
