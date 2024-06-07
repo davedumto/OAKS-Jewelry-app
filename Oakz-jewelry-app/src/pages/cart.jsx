@@ -3,11 +3,10 @@ import Footer from '../components/footer';
 import Oakz from '../../public/images/OAKZ(1).svg';
 import LocalGroceryStoreTwoToneIcon from '@mui/icons-material/LocalGroceryStoreTwoTone';
 import Return from '../../public/images/return-icon.svg';
-import CartPage from '../components/cartpage';
+import CartPage2 from '../components/cartpage2';
 
 export default function Cart() {
-  const { cartItems } = useCart(); // Access cartItems from CartContext
-  console.log("Cart Items:", cartItems);
+
   return (
     <>
       <div className='h-screen sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
@@ -26,7 +25,7 @@ export default function Cart() {
             </div>
           </div>
         </div>
-        <CartPage/>
+        <CartPage2/>
       </div>
       <Footer/>
     </>

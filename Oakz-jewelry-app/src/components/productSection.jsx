@@ -103,7 +103,7 @@ const ProductSection = () => {
                   <a >
                     <img
                       src="/images/add.svg"
-                      className="h-[2em]"
+                      className="h-[2em] cursor-pointer"
                       alt="in stock icon"
                       onClick={() => {
                         addToCart(product);
