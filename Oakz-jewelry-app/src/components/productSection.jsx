@@ -3,8 +3,25 @@ import { Link } from "react-router-dom";
 import productList from "../data/productList";
 import productItems from "../data/productItem";
 import { ArrowLeft, ArrowRight } from "@mui/icons-material";
+import MyModal from "./MyModal";
+
 
 const ProductSection = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setModalIsOpen(false);
+  };
+
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -32,6 +49,9 @@ const ProductSection = () => {
 
   return (
     <div className="flex flex-col w-full px-[2em] md:px-[4em] py-[4em] ">
+
+        <MyModal isOpen={modalIsOpen} onRequestClose={closeModal} product={selectedProduct}/>
+    
       <div className="flex gap-[0.3em] md:flex-col w-full mb-[2em] md:mb-0">
         <div className="flex flex-col  md:w-full items-start">
           <h1 className="text-[2em] md:text-[3em] ">
@@ -61,6 +81,7 @@ const ProductSection = () => {
                 className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
                 key={index}
                 onClick={() => handleListItemClick(product)}
+                
               >
                 {product}
               </li>
@@ -98,11 +119,12 @@ const ProductSection = () => {
                 <p>NGN: {product.price}</p>
 
                 {product.stock === "IN STOCK" ? (
-                  <a href="">
+                  <a>
                     <img
                       src="/images/add.svg"
-                      className="h-[2em]"
+                      className="h-[2em] cursor-pointer"
                       alt="in stock icon"
+                      onClick={() => openModal(product)}
                     />
                   </a>
                 ) : (

@@ -1,20 +1,7 @@
 import React, { useState } from 'react';
 import productItems from '../data/productItem';
 
-// const productItems = [
-//   {
-//     imgSrc: "/images/ring1.jpeg",
-//     name: "Rose Roast Rings",
-//     stock: "IN STOCK",
-//     price: 2500,
-//   },
-//   {
-//     imgSrc: "/images/ring2.jpeg",
-//     name: "Golden Bliss Rings",
-//     stock: "IN STOCK",
-//     price: 5500,
-//   },
-// ];
+
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([
@@ -64,22 +51,22 @@ const CartPage = () => {
           </li>
         ))} */}
       </ul> 
-      <ul className="flex flex-col gap-5 w-full px-6">
+      <ul className="flex flex-col gap-5 w-full px-6 text-green">
         {cartItems.map((item) => (
           <li key={item.id} className="bg-[#FEFEFE] w-full flex sm:flex-row flex-col sm:justify-between justify-center gap-4 sm:gap-0 border py-3 px-8 shadow-md font-bienvenido text-green">
             <div className='flex items-center sm:items-start gap-4 '>
               <img src={item.imgSrc} alt={item.name} className="sm:w-28 w-16 sm:h-28 h-16 object-cover border border-green rounded-lg" />
-              <div className='flex flex-col justify-between gap-[6px] sm:gap-0 '>
+              <div className='flex flex-col justify-between gap-[6px] sm:gap-4 '>
                 <div className='sm:block flex flex-col gap-[6px] '>
                   <div className="flex font-medium sm:text-[32px] text-2xl sm:leading-[37.44px] leading-7">{item.name}</div>
-                  <p className='sm:leading-[18px] leading-3 font-bienvenido text-md sm:text-[12px] text-green'>NGN: {item.price}</p >
+                  <p className='sm:leading-[18px] leading-3 font-bienvenido sm:text-[16px] text-[12px] text-green'>NGN: {item.price}</p >
                 </div>
                 <div className='flex gap-3 items-center sm:pb-3'>
-                  <button onClick={() => decreaseQuantity(item.id)} className=" w-[24px] h-[24px] flex items-center justify-center bg-green text-white  rounded-full sm:border-0 border-2 border-green hover:bg-red-600">
+                  <button onClick={() => decreaseQuantity(item.id)} className=" w-[24px] h-[24px] flex items-center justify-center font-extrabold bg-green text-white  rounded-full sm:border-0 border-2 border-green hover:bg-red-600">
                     -
                   </button>
-                  <span className='sm:text-md text-[12px]'>Qty: {item.quantity}</span>
-                  <button onClick={() => increaseQuantity(item.id)} className="w-[24px] h-[24px] flex items-center justify-center bg-brownbg text-white hover:bg-blue-600 rounded-full sm:border-0 border-2 border-green">
+                  <span className='sm:text-[16px] text-[12px]'>Qty: {item.quantity}</span>
+                  <button onClick={() => increaseQuantity(item.id)} className="w-[24px] h-[24px] flex items-center justify-center font-extrabold bg-brownbg text-white hover:bg-blue-600 rounded-full sm:border-0 border-2 border-green">
                     +
                   </button>
                   
@@ -88,7 +75,7 @@ const CartPage = () => {
             </div>
             <div className='flex sm:flex-col flex-row gap-5'>
               <button className='px-3 sm:py-1 py-0 h-5 sm:h-7 rounded-2xl border sm:text-md text-[12px] border-green'>View product</button>
-              <div className='sm:text-md text-[12px]'>Price: <br/> NGN:{item.price * item.quantity}</div>
+              <div className='sm:text-[16px] leading-[18px] text-[12px]'>Price: <br/> NGN:{item.price * item.quantity}</div>
             </div>
           </li>
         ))}
@@ -99,6 +86,7 @@ const CartPage = () => {
           <button className='px-3 py-1 rounded-2xl bg-green text-white w-full'>CHECKOUT</button>
         </div>
       </div>
+
     </div>
   );
 };
