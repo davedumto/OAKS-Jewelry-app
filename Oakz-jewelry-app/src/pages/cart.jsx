@@ -9,7 +9,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className='h-screen sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
+      <div className=' sm:py-[40px] py-[30px] sm:px-[70px] px-[20px]'>
         <div className='flex flex-col gap-[22px]'>
           <div className='flex justify-between items-center'>
             <img src={Oakz} alt="Oakz-logo" />

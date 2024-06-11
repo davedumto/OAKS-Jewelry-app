@@ -26,6 +26,7 @@ const Checkout = () => {
     }
   };
   return (
+    <>
     <div className="flex flex-col gap-[5em] w-full">
       <div className="flex flex-col gap-[3em] px-[2em] py-[1.5em] md:px-[3em] ">
         <div>
@@ -36,7 +37,7 @@ const Checkout = () => {
               className="w-[6em] md:w-auto"
             />
             <div className="flex gap-[1em] items-center">
-              <div className="md:hidden py-[0.125em] h-[2.125em]  flex-row gap-1 hover:cursor-text rounded-[3.125em] bg-transparent border-[1.5px] border-green focus-within:border-green focus-within:border active:border-green items-center relative">
+              <div className="hidden py-[0.125em] h-[2.125em]  flex-row gap-1 hover:cursor-text rounded-[3.125em] bg-transparent border-[1.5px] border-green focus-within:border-green focus-within:border active:border-green items-center relative">
                 <input
                   type="search"
                   className=" text-sm active:border-2 focus:text-[#04020099]/90 focus:border-none outline-none bg-inherit h-full w-[2.5em] text-beige"
@@ -70,7 +71,7 @@ const Checkout = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-[2em] flex-col w-full justify-between  ">
+        <div className="flex gap-[2em] md:flex-row  flex-col w-full justify-between  ">
           <div className="flex flex-col shadow-2xl pt-[1em] pb-[2em] px-[1em]  lg:w-[35%]">
             <div className="flex flex-col flex-1 gap-[2em]">
               <p className="text-[2em] font-normal">Your Items are</p>
@@ -100,7 +101,7 @@ const Checkout = () => {
               </p>
             </div>
           </div>
-          <div className="flex shadow-2xl flex-1 gap-[0.5em] justify-between  ">
+          <div className="flex md:flex-row flex-col shadow-2xl flex-1 gap-[0.5em] justify-between  ">
             <div className="flex flex-col justify-between flex-1 pt-[2em]  pb-[2em] ">
               <div className="flex flex-col gap-[1em] border-r-[1px] border-[#5252524D] px-[1.5em] justify-between">
                 {" "}
@@ -115,8 +116,8 @@ const Checkout = () => {
                     >
                       <p>{field.label}</p>
                       <input
-                        className="w-full"
-                        type="text"
+                        className="w-full border border-white focus-visible:outline-none "
+                        type={field.type}
                         placeholder={field.placeholder}
                       />
                     </div>
@@ -131,20 +132,20 @@ const Checkout = () => {
             <div className="flex flex-col flex-1 px-[1.5em] pt-[2em]  pb-[2em] justify-between">
               <div className="flex flex-col gap-[2em]">
                 <p className="text-[2em] leading-9">
-                  Transfer to the account bellow{" "}
+                  Transfer to the account below{" "}
                 </p>
                 <div>
                   <ul>
                     <li className="flex justify-between">
                       <span>Account Name:</span>
-                      <span>OKAZ Stores</span>
+                      <span>OAKZ Stores</span>
                     </li>
                     <li className="flex justify-between">
-                      <span>Account Number:</span> <span>12345678</span>
+                      <span>Account Number:</span> <span>1234567890</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Bank Name:</span>
-                      <span>MoniePoint</span>
+                      <span>Access Bank PLC</span>
                     </li>
                   </ul>
                 </div>
@@ -161,7 +162,7 @@ const Checkout = () => {
                           </div>
                           <div className=" ">
                             {file && (
-                              <p className="text-gray-700 w-[2em] overflow-hidden overflow-ellipsis whitespace-nowrap p-1">
+                              <p className="text-gray-700  overflow-hidden overflow-ellipsis whitespace-nowrap p-1">
                                 {file.name}
                               </p>
                             )}
@@ -193,6 +194,7 @@ const Checkout = () => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 
