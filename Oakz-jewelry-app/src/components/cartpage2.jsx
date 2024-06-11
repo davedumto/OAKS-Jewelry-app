@@ -2,23 +2,26 @@ import React from "react";
 import { useCart } from "../CartContext";
 
 const CartPage = () => {
-  const { cartItems } = useCart(); // Access cartItems from CartContext
+  const { cartItems, incrementQuantity, decrementQuantity, removeFromCart } = useCart();
 
-  // Function to group cart items by ID and calculate their total quantity
   const groupCartItems = (items) => {
     const groupedItems = {};
     items.forEach((item) => {
       if (groupedItems[item.id]) {
-        groupedItems[item.id].quantity += 1; // Increment quantity if item with same ID exists
+        groupedItems[item.id].quantity += 1;
       } else {
-        groupedItems[item.id] = { ...item, quantity: 1 }; // Add new item with quantity 1
+        groupedItems[item.id] = { ...item, quantity: 1 };
       }
     });
-    return Object.values(groupedItems); // Convert object back to array
+    return Object.values(groupedItems);
   };
 
-  // Group cart items
   const groupedCartItems = groupCartItems(cartItems);
+
+  const totalPrice = cartItems.reduce(
+    (total, item) => total + item.price * item.quantity,
+    0
+  );
 
   return (
     <div className="container mx-auto p-4">
@@ -26,6 +29,7 @@ const CartPage = () => {
       {groupedCartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
+        <div className="lg:flex lg:justify-between">
         <ul>
           {groupedCartItems.map((item, index) => (
             <li key={index} className="mb-4">
@@ -36,13 +40,24 @@ const CartPage = () => {
               />
               <div>
                 <h3 className="text-lg font-semibold">{item.name}</h3>
-                <p>Quantity: {item.quantity}</p>
-
+                <p>Quantity: {item.id}</p>
+                <div className="flex gap-2">
+                  <button onClick={() => decrementQuantity(item.id)} className="w-[24px] h-[24px] flex items-center justify-center font-extrabold bg-green text-white  rounded-full sm:border-0 border-2 border-green hover:bg-red-600">-</button>
+                  <button onClick={() => incrementQuantity(item.id)} className="w-[24px] h-[24px] flex items-center justify-center font-extrabold bg-brownbg text-white hover:bg-blue-600 rounded-full sm:border-0 border-2 border-green">+</button>
+                  <button onClick={() => removeFromCart(item.id)} className="">Remove</button>
+                </div>
                 <p>Total price: NGN: {item.price * item.quantity}</p>
               </div>
             </li>
           ))}
+          
         </ul>
+        <div className='flex flex-col gap-3'>
+          <h3 className="text-3xl font-bienvenido text-green">Total : {totalPrice}</h3>
+          <button className='px-3 py-1 rounded-2xl bg-green text-white w-full'>CHECKOUT</button>
+        </div>
+        
+        </div>
       )}
     </div>
   );
