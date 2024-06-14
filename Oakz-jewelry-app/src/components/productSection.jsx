@@ -78,7 +78,7 @@ const ProductSection = () => {
           <ul className="hidden text-red-400 md:flex justify-around border-[0.1875em] border-brownbg p-[0.625em] rounded-[2em] bg-beige w-fit">
             {productList.map((product, index) => (
               <li
-                className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg hover:text-white hover:rounded-[2em]"
+                className="text-[1em] cursor-pointer text-black active:bg-brownbg active:text-white active:rounded-[2em] py-2 md:px-[1em] lg:px-[1.5em] focus:bg-brownbg focus:text-white focus:rounded-[2em] hover:bg-brownbg duration-200 hover:text-white hover:rounded-[2em]"
                 key={index}
                 onClick={() => handleListItemClick(product)}
                 

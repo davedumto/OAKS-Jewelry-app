@@ -63,7 +63,9 @@ const SearchProduct = () => {
               </div>
             </div>
 
-            <LocalGroceryStoreOutlined />
+            <Link to={"/cart"}>
+              <LocalGroceryStoreOutlined />
+            </Link>
           </div>
         </header>
         <div className="flex justify-between items-center bg-beige md:gap-[5em] p-3">

@@ -49,63 +49,88 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
 
   if (!product) return null;
 
+  const customStyles = {
+    overlay: {
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
+    },
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      padding: "10px",
+      width: "90%",
+      maxWidth: "40rem",
+      height: "auto",
+      maxHeight: "80%",
+      borderRadius: "20px",
+      overflowY: "auto",
+    },
+  };
+
+  const responsiveStyles = `
+    @media (min-width: 768px) {
+      .ReactModal__Content {
+        width: 40% !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .ReactModal__Content {
+        width: 90% !important;
+      }
+    }
+  `;
+
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={onRequestClose}
       contentLabel="Product Details"
-      style={{
-        overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        },
-        content: {
-          top: "50%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          marginRight: "-50%",
-          transform: "translate(-50%, -50%)",
-          padding: "10px",
-          width: "40%",
-          height: "80%",
-          borderRadius: "20px",
-        },
-      }}
+      style={customStyles}
     >
-      <div className="flex gap-2">
-        <div className="w-1/3">
+      <style>{responsiveStyles}</style>
+      <div className="flex flex-col md:flex-row gap-4 md:gap-2">
+        <div className="flex flex-col w-full md:w-1/3">
+          <div className="flex justify-between items-start md:hidden mb-4">
+            <h2 className="text-xl md:text-2xl">{product.name}</h2>
+            <button onClick={onRequestClose}>
+              <CancelOutlined />
+            </button>
+          </div>
           <img
             src={product.imgSrc}
             alt={product.name}
-            className="object-cover w-[12rem] h-[14rem] mb-4"
+            className="object-cover w-full h-48 md:w-[12rem] md:h-[14rem] mb-4"
           />
           <p>{product.description}</p>
         </div>
-        <div className="flex w-2/3 flex-col gap-4">
-          <div className="w-full flex justify-between">
-            <h2 className="text-2xl mb-2">{product.name}</h2>
+        <div className="flex flex-col w-full md:w-2/3 gap-4">
+          <div className="hidden md:flex justify-between">
+            <h2 className="text-xl md:text-2xl mb-2">{product.name}</h2>
             <div className="flex justify-start items-start">
               <button onClick={onRequestClose}>
                 <CancelOutlined />
               </button>
             </div>
           </div>
-          <div className="flex gap-2 justify-between">
+          <div className="flex flex-col md:flex-row gap-2 justify-between">
             <div>
               <p className={`text-sm mb-4 ${product.stock === "IN STOCK" ? "text-green-600" : "text-red-600"}`}>
                 {product.stock}
               </p>
               <p className="text-lg mb-2">NGN: {product.price}</p>
             </div>
-            <div className="flex gap-4 flex-col">
-              <p className="bg-[#BB2929] text-[1em] py-[1px] px-[3px] text-white">PROMO 35% OFF</p>
+            <div className="flex flex-col gap-4">
+              <p className="bg-[#BB2929] text-sm py-1 px-3 text-white">PROMO 35% OFF</p>
               <div className="flex flex-col gap-2">
-                <button className="bg-[#172D13] text-[1em] py-[3px] px-[6px] w-full text-white rounded-2xl border-[1px] border-white">
+                <button className="bg-[#172D13] text-sm py-1 px-2 w-full text-white rounded-xl border border-white">
                   Buy now
                 </button>
                 {quantity === 0 ? (
                   <button
-                    className="bg-white text-[1em] py-[3px] px-[6px] text-black rounded-2xl border-[1px] border-green"
+                    className="bg-white text-sm py-1 px-2 text-black rounded-xl border border-green-600"
                     onClick={handleAddToCart}
                   >
                     Add to cart
@@ -122,7 +147,6 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
           </div>
         </div>
       </div>
-   
     </Modal>
   );
 };
