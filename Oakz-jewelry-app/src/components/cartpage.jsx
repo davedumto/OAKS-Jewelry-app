@@ -1,8 +1,10 @@
 import React from "react";
 import { useCart } from "../CartContext";
+import { useNavigate } from 'react-router-dom'
 
 const CartPage = () => {
   const { cartItems, updateCart, removeFromCart } = useCart();
+  const history = useNavigate()
 
   const incrementQuantity = (productId) => {
     const product = cartItems.find(item => item.id === productId);
@@ -41,6 +43,13 @@ const CartPage = () => {
     (total, item) => total + item.price * item.quantity,
     0
   );
+
+  const handleCheckout = () => {
+    history.push({
+      pathname: '/checkout',
+      state: { cartItems: groupCartItems, totalPrice}
+    });
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -81,7 +90,7 @@ const CartPage = () => {
         </ul>
         <div className='flex flex-col gap-3'>
           <h3 className="text-3xl font-bienvenido text-green">Total : {totalPrice}</h3>
-          <button className='px-3 py-1 rounded-2xl bg-green text-white w-full'>CHECKOUT</button>
+          <button className='px-3 py-1 rounded-2xl bg-green text-white w-full' onClick={handleCheckout}>CHECKOUT</button>
         </div>
         
         </div>
