@@ -3,7 +3,7 @@ import Footer from '../components/footer';
 import Oakz from '../../public/images/OAKZ(1).svg';
 import LocalGroceryStoreTwoToneIcon from '@mui/icons-material/LocalGroceryStoreTwoTone';
 import Return from '../../public/images/return-icon.svg';
-import CartPage2 from '../components/cartpage2';
+import CartPage from '../components/cartpage';
 import ArrowRoundedBack from "/images/mingcute.svg";
 import { Link } from 'react-router-dom';
 
@@ -32,7 +32,7 @@ export default function Cart() {
             </Link>
           </div>
         </div>
-        <CartPage2/>
+        <CartPage/>
       </div>
       <Footer/>
     </>
