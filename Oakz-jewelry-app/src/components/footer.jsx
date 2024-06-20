@@ -38,11 +38,11 @@ export default function Footer() {
                   </div>
               </div>
               <div className='flex flex-row sm:justify-end gap-2 items-center pt-2'>
-                  <button className='bg-beige py-2 px-2 w-[180px] rounded-3xl flex justify-center items-center'><a href='mailto:nnamaninwanne@gmail.com'><span className='px-1 leading-3'><MailIcon fontSize='small'/></ span >mail@gmail.com</a></button>
-                  <button className='bg-beige rounded-[50%] px-2 py-[6px]'>
+                  <button className='bg-beige hover:bg-beige/70 duration-200 py-2 px-2 w-[180px] rounded-3xl flex justify-center items-center'><a href='mailto:nnamaninwanne@gmail.com'><span className='px-1 leading-3'><MailIcon fontSize='small'/></ span >mail@gmail.com</a></button>
+                  <button className='bg-beige hover:bg-beige/70 duration-200 rounded-[50%] px-2 py-[6px]'>
                     <a><PhoneEnabledOutlinedIcon fontSize='small'/></a>
                   </button>
-                  <button className='bg-beige rounded-[50%] px-2 py-[6px]'>
+                  <button className='bg-beige hover:bg-beige/70 duration-200 rounded-[50%] px-2 py-[6px]'>
                     <a><WhatsAppIcon fontSize='small' /></a>
                   </button>
               </div>
