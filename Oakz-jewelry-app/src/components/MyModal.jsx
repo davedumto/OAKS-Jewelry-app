@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useCart } from "../CartContext"; // Adjust the path as needed
 import Modal from "react-modal";
 import { CancelOutlined } from "@mui/icons-material";
-import {  toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import addition from "./../../public/images/addition.svg";
 import subtract from "./../../public/images/subtract.svg";
+
 import "./MyModal.css";
 
 Modal.setAppElement("#root");
@@ -14,6 +15,8 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
   const { cartItems, addToCart, removeFromCart, updateCart } = useCart();
   const [quantity, setQuantity] = useState(0);
 
+  const [selectedColor, setSelectedColor] = useState(product?.colors[0] || "");
+  const [selectedSize, setSelectedSize] = useState(product?.sizes[0] || "");
   useEffect(() => {
     if (product) {
       const cartItem = cartItems.find((item) => item.id === product.id);
@@ -99,11 +102,27 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
               <CancelOutlined />
             </button>
           </div>
-          <img
-            src={product.imgSrc}
-            alt={product.name}
-            className="object-cover w-full h-48 md:w-[12rem] md:h-[14rem] mb-4"
-          />
+          <div>
+            <img
+              src={product.imgSrc}
+              alt={product.name}
+              className="object-cover w-full h-48 md:w-[12rem] md:h-[14rem] mb-2 rounded-md"
+            />
+            <div>
+              <ul className="flex justify-between">
+              <li className="bg-orange-300 text-[0.7rem] text-white rounded-md py-1 px-3 cursor-pointer">
+                  Gold
+                </li>
+                <li className="bg-zinc-400 text-[0.7rem] text-white rounded-md py-1 px-3 cursor-pointer">
+                  Silver
+                </li>
+                <li className="bg-black text-[0.7rem] text-white rounded-md py-1 px-3 cursor-pointer">
+                  Black
+                </li>
+              
+              </ul>
+            </div>
+          </div>
           <p>{product.description}</p>
         </div>
         <div className="flex flex-col w-full md:w-2/3 gap-4">
@@ -117,13 +136,21 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
           </div>
           <div className="flex flex-col md:flex-row gap-2 justify-between">
             <div>
-              <p className={`text-sm mb-4 ${product.stock === "IN STOCK" ? "text-green-600" : "text-red-600"}`}>
+              <p
+                className={`text-sm mb-4 ${
+                  product.stock === "IN STOCK"
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
                 {product.stock}
               </p>
               <p className="text-lg mb-2">NGN: {product.price}</p>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="bg-[#BB2929] text-sm py-1 px-3 text-white">PROMO 35% OFF</p>
+              <p className="bg-[#BB2929] text-sm py-1 px-3 text-white">
+                PROMO 35% OFF
+              </p>
               <div className="flex flex-col gap-2">
                 <button className="bg-[#172D13] text-sm py-1 px-2 w-full text-white rounded-xl border border-white">
                   Buy now
@@ -137,9 +164,19 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
                   </button>
                 ) : (
                   <div className="flex items-center justify-around">
-                    <img src={subtract} alt="decrease" onClick={handleDecrement} />
+                    <img
+                      src={subtract}
+                      alt="decrease"
+                      onClick={handleDecrement}
+                      className="cursor-pointer"
+                    />
                     QTY: {quantity}
-                    <img src={addition} alt="increase" onClick={handleIncrement} />
+                    <img
+                      src={addition}
+                      alt="increase"
+                      onClick={handleIncrement}
+                      className="cursor-pointer fill-black "
+                    />
                   </div>
                 )}
               </div>

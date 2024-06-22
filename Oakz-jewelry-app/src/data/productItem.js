@@ -5,6 +5,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 7500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 10,
@@ -68,6 +86,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 11,
@@ -75,6 +95,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 12,
@@ -82,6 +104,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 13,
@@ -89,6 +113,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 14,
@@ -96,6 +122,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 15,
@@ -103,6 +131,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 16,
@@ -110,6 +140,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 17,
@@ -117,6 +149,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 18,
@@ -124,13 +158,18 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
+
   {
     id: 19,
     imgSrc: "/images/ring1.jpeg",
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 20,
@@ -138,6 +177,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 21,
@@ -145,6 +186,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 22,
@@ -152,6 +195,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 23,
@@ -159,6 +204,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 24,
@@ -166,6 +213,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   },
   {
     id: 25,
@@ -173,6 +222,8 @@ const productItems = [
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
+    colors: ["Silver", "Gold", "Black"],
+    sizes: ["S", "M", "L", "XL"]
   }
 ];
 
