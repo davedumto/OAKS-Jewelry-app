@@ -26,10 +26,20 @@ export const CartProvider = ({ children }) => {
           item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
         );
       } else {
-        return [...prevItems, { ...product, quantity }];
+        const newItem = {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity,
+          color: product.color,
+          size: product.size,
+          imgSrc: product.imgSrc[product.color],
+        };
+        return [...prevItems, newItem];
       }
     });
   };
+  
 
   const updateCart = (productId, quantity) => {
     setCartItems((prevItems) =>
