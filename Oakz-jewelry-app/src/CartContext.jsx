@@ -31,13 +31,15 @@ export const CartProvider = ({ children }) => {
           name: product.name,
           price: product.price,
           quantity,
-          color: product.color, // Assuming product.color is set correctly
-          size: product.size, // Assuming product.size is set correctly
+          color: product.color,
+          size: product.size,
+          imgSrc: product.imgSrc[product.color],
         };
         return [...prevItems, newItem];
       }
     });
   };
+  
 
   const updateCart = (productId, quantity) => {
     setCartItems((prevItems) =>

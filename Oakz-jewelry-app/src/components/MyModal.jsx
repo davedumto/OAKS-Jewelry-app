@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import addition from "./../../public/images/addition.svg";
 import subtract from "./../../public/images/subtract.svg";
 import "./MyModal.css";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 Modal.setAppElement("#root");
 
@@ -18,7 +19,7 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
   const [currentImgSrc, setCurrentImgSrc] = useState(
     product ? product.imgSrc.Gold : ""
   );
-
+  const navigate = useNavigate(); // Initialize useNavigate
   const handleColorChange = (color) => {
     setSelectedColor(color);
     setCurrentImgSrc(product.imgSrc[color]);
@@ -46,10 +47,7 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
   }, [product, cartItems]);
 
   const handleAddToCart = () => {
-    addToCart(
-      { ...product, color: selectedColor, size: selectedSize },
-      1
-    );
+    addToCart({ ...product, color: selectedColor, size: selectedSize }, 1);
     setQuantity(1);
     toast.success("Cart updated successfully!");
   };
@@ -72,6 +70,14 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
       removeFromCart(product.id);
       toast.success("Item removed from cart!");
     }
+  };
+  const handleBuyNow = () => {
+    navigate("/checkout", {
+      state: {
+        cartItems: [{ ...product, color: selectedColor, size: selectedSize }],
+        totalPrice: product.price * quantity,
+      },
+    });
   };
 
   if (!product) return null;
@@ -164,7 +170,9 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
                     <button
                       key={color}
                       className={`${colorClasses[color]} text-[0.7rem] ${
-                        selectedColor === color ? "border-black" : ""
+                        selectedColor === color
+                          ? "border-black border-[1px]"
+                          : ""
                       } text-white rounded-md py-1 px-2 cursor-pointer`}
                       onClick={() => handleColorChange(color)}
                     >
@@ -177,7 +185,9 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
                     <button
                       key={size}
                       className={`text-[0.7rem] flex justify-center items-center border-[1px] ${
-                        selectedSize === size ? "border-black" : "border-zinc-400"
+                        selectedSize === size
+                          ? "border-black"
+                          : "border-zinc-400"
                       } rounded-md py-1 px-3 cursor-pointer`}
                       onClick={() => handleSizeChange(size)}
                     >
@@ -216,7 +226,10 @@ const MyModal = ({ isOpen, onRequestClose, product }) => {
                     />
                   </div>
                 )}
-                <button className="bg-[#172D13] text-sm py-1 px-2 w-full text-white rounded-xl border border-white">
+                <button
+                  className="bg-[#172D13] text-sm py-1 px-2 w-full text-white rounded-xl border border-white"
+                  onClick={handleBuyNow}
+                >
                   Buy now
                 </button>
               </div>
