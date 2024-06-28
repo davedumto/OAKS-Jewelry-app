@@ -1,230 +1,356 @@
 const productItems = [
   {
     id: 1,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 2,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 3,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 4,
-    imgSrc: "/images/ring2.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 5,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 7500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 6,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 7,
-    imgSrc: "/images/ring3.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 8,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 9,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 10,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 11,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 12,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 13,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 14,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 15,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 16,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 17,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 18,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
 
   {
     id: 19,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 20,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 21,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 22,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 23,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 5500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 24,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "OUT OF STOCK",
     price: 2500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
   },
   {
     id: 25,
-    imgSrc: "/images/ring1.jpeg",
+    
     name: "Rose Roast Rings",
     stock: "IN STOCK",
     price: 9500,
     colors: ["Silver", "Gold", "Black"],
-    sizes: ["S", "M", "L", "XL"]
-  }
+    sizes: ["S", "M", "L", "XL"],
+    imgSrc: {
+      Gold: "/images/ring1.jpeg",
+      Silver: "/images/ring3.jpeg",
+      Black: "/images/ring2.jpeg",
+    },
+  },
 ];
 
 export default productItems;

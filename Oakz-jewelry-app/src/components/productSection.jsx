@@ -96,7 +96,7 @@ const ProductSection = () => {
             className="flex flex-col items-center bg-beige w-full h-fit "
           >
             <img
-              src={product.imgSrc}
+              src={product.imgSrc.Gold}
               alt={product.name}
               className="object-contain w-full h-auto "
             />

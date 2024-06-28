@@ -26,7 +26,15 @@ export const CartProvider = ({ children }) => {
           item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
         );
       } else {
-        return [...prevItems, { ...product, quantity }];
+        const newItem = {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity,
+          color: product.color, // Assuming product.color is set correctly
+          size: product.size, // Assuming product.size is set correctly
+        };
+        return [...prevItems, newItem];
       }
     });
   };
