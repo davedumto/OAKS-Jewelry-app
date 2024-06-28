@@ -8,15 +8,22 @@ import { LocalGroceryStoreOutlined, Search } from "@mui/icons-material";
 import { productPriceFilters, productNameFilters } from "../data/productFilter";
 import Footer from "../components/footer";
 import productItems from "../data/productItem";
-import Popup from './Popups';
-
-
-
+import MyModal from "./../components/MyModal";
 
 const SearchProduct = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setModalIsOpen(true);
+  };
 
-  const togglePopup = () => setIsOpen(!isOpen);
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setModalIsOpen(false);
+  };
+
   const [nameFilters, setNameFilters] = useState(productNameFilters);
   const [priceFilters, setPriceFilters] = useState(productPriceFilters);
 
@@ -42,6 +49,11 @@ const SearchProduct = () => {
 
   return (
     <div>
+      <MyModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        product={selectedProduct}
+      />
       <div className=" px-[2em] md:px-[3em]">
         <header className="flex justify-between items-end mt-[1em] mb-[1em]">
           <img
@@ -149,7 +161,7 @@ const SearchProduct = () => {
                   className="flex flex-col items-center bg-beige w-full h-fit "
                 >
                   <img
-                    src={product.imgSrc}
+                    src={product.imgSrc.Gold}
                     alt={product.name}
                     className="object-contain w-full h-auto "
                   />
@@ -172,9 +184,19 @@ const SearchProduct = () => {
                       <p>NGN: {product.price}</p>
 
                       {product.stock === "IN STOCK" ? (
-                        <a href="#" onClick={(e) => { e.preventDefault(); togglePopup(); }} className="cursor-pointer">
-                        <img src="/images/add.svg" className="h-[2em]" alt="in stock icon"/>
-                      </a>
+                        <a
+                          href="#"
+                          onClick={(e) => {
+                            e.preventDefault(), openModal(product);
+                          }}
+                          className="cursor-pointer"
+                        >
+                          <img
+                            src="/images/add.svg"
+                            className="h-[2em]"
+                            alt="in stock icon"
+                          />
+                        </a>
                       ) : (
                         <img
                           src="/images/add.svg"
@@ -191,10 +213,10 @@ const SearchProduct = () => {
         </div>
       </div>
 
-      {/* Popup content below  */}
+     
 
-      <Popup isOpen={isOpen} onClose={togglePopup}/>
     
+
       <Footer />
     </div>
   );
