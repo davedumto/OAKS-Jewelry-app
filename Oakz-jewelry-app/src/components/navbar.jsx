@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
+import { Link } from 'react-router-dom';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
 import Oakz from '../../public/images/OAKZ.svg';
 import Oakz_mobile from '../../public/images/OAKZ_mobile.svg';
@@ -60,15 +61,18 @@ function Navbar() {
             </div>
           </div>
           <div className='relative p-1'>
-            <span>
-              <LocalGroceryStoreOutlinedIcon />
-            </span>
-            <div className='w-[10px] h-[10px] bg-[#BB2929] absolute top-0 right-0 rounded-full'></div>
+            <Link to={"/cart"}>
+              
+              <span>
+                <LocalGroceryStoreOutlinedIcon />
+              </span>
+              <div className='w-[10px] h-[10px] bg-[#BB2929] absolute top-0 right-0 rounded-full'></div>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Block for mobile - Search Icon toggles visibility of Search Bar */}
+      {/* Block for mobile - Search Icon toggling */}
       <div ref={searchRef} className='flex justify-between items-center gap-4 sm:hidden w-full'>
       <div>
           {isSearchOpen ? null : <img src={Oakz_mobile} alt='OAKZ' className='' />}
@@ -86,8 +90,10 @@ function Navbar() {
             
             </div>
             <div className='relative p-1'>
-                <span><LocalGroceryStoreOutlinedIcon/></span>
-                <div className='w-[10px] h-[10px] bg-[#BB2929] absolute top-0 right-0 rounded-full'></div>
+                <Link to="/cart">{" "}
+                  <span><LocalGroceryStoreOutlinedIcon/></span>
+                  <div className='w-[10px] h-[10px] bg-[#BB2929] absolute top-0 right-0 rounded-full'></div>
+                </Link>
             </div>
         </div>
       </div>
