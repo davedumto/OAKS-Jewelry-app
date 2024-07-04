@@ -89,19 +89,19 @@ const ProductSection = () => {
           </ul>
         </div>
       </div>
-      <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid justify-center  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
         {productItems.slice(0, numItems).map((product, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-beige w-full h-fit "
+            className="flex flex-col items-center bg-beige w-full h-fit rounded-lg "
           >
             <img
               src={product.imgSrc.Gold}
               alt={product.name}
-              className="object-contain w-full h-auto "
+              className="object-contain w-full h-auto rounded-t-lg "
             />
 
-            <div className="flex flex-col w-full justify-around h-[50%] px-2">
+            <div className="flex flex-col w-full justify-around h-[50%] px-2 ">
               <div className="flex flex-col my-[0.5em] md:mt-[1.5em] md:mb-[2.5em] md:flex-row gap-[0.2em] justify-between w-full">
                 <p className="text-[1em]">{product.name}</p>
 
