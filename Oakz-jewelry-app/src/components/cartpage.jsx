@@ -61,7 +61,7 @@ const CartPage = () => {
   );
 
   const handleCheckout = () => {
-    navigate("/checkout");
+    navigate("/checkout", { state: { totalPrice, cartItems: groupedCartItems } });
   };
 
   return (
