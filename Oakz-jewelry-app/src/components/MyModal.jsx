@@ -4,8 +4,8 @@ import Modal from "react-modal";
 import { CancelOutlined } from "@mui/icons-material";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import addition from "./../../public/images/addition.svg";
-import subtract from "./../../public/images/subtract.svg";
+import addition from "/images/addition.svg";
+import subtract from "/images/subtract.svg";
 import "./MyModal.css";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 

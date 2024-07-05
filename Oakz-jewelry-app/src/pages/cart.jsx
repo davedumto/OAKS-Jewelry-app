@@ -11,7 +11,7 @@ export default function Cart() {
 
   return (
     <>
-      <div className=' sm:py-[40px] py-[30px] sm:px-[70px] px-[16px] h-[72.9vh]'>
+      <div className=' sm:py-[40px] py-[30px] sm:px-[70px] px-[16px] '>
         <div className='flex flex-col gap-[22px]'>
           <div className='flex justify-between items-center'>
             <Link to="/">
@@ -25,7 +25,7 @@ export default function Cart() {
           <div className='bg-beige py-3 sm:px-8 px-4 flex justify-between items-center'>
             <p className='font-bienvenido sm:text-3xl text-2xl leading-[37.44px]'>Cart</p>
             <Link to={"/"}>  
-              <div className='flex gap-1 sm:gap-2 items-center'>
+              <div className='flex gap-1 sm:gap-2 items-center '>
               
                 {""}
                 <span><img src={ArrowRoundedBack} className=''/></span>

@@ -36,11 +36,14 @@ const Checkout = () => {
         <div className="flex flex-col gap-[3em] px-[2em] py-[1.5em] md:px-[3em] ">
           <div>
             <header className="flex justify-between items-end my-[1em]">
+              <Link to="/">
               <img
                 src={OAKZ_WHITE}
                 alt=" logo icon"
                 className="w-[6em] md:w-auto"
               />
+              </Link>
+
               <div className="flex gap-[1em] items-center">
                 <div className="hidden py-[0.125em] h-[2.125em]  flex-row gap-1 hover:cursor-text rounded-[3.125em] bg-transparent border-[1.5px] border-green focus-within:border-green focus-within:border active:border-green items-center relative">
                   <input

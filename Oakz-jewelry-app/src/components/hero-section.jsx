@@ -1,11 +1,11 @@
 import React from "react";
-import neckstand from "./../../public/images/neckstand 2.svg";
-import splatter from "./../../public/images/splatter 2.svg";
-import heroDisplay1 from "./../../public/images/hero display 1.png";
-import heroDisplay2 from "./../../public/images/hero display 2.png";
-import heroDisplay3 from "./../../public/images/hero display 3.png";
-import heroDisplay4 from "./../../public/images/hero display 4.png";
-import heroDisplay5 from "./../../public/images/hero display 5.png";
+import neckstand from "/images/neckstand 2.svg";
+import splatter from "/images/splatter 2.svg";
+import heroDisplay1 from "/images/hero display 1.png";
+import heroDisplay2 from "/images/hero display 2.png";
+import heroDisplay3 from "/images/hero display 3.png";
+import heroDisplay4 from "/images/hero display 4.png";
+import heroDisplay5 from "/images/hero display 5.png";
 import "./hero.css";
 import Navbar from "./navbar";
 import HeroImages from "./HeroImages"; // Importing the HeroImages component
