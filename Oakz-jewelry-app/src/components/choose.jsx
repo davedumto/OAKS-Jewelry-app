@@ -1,8 +1,8 @@
 import React from 'react';
 import './choose.css';
-import Vector from '../../public/images/ic_outline-gpp-good.svg';
-import HandShake from '../../public/images/mdi_handshake-outline.svg';
-import WhyChoose from '../../public/images/Whychoose.svg';
+import Vector from '/images/ic_outline-gpp-good.svg';
+import HandShake from '/images/mdi_handshake-outline.svg';
+import WhyChoose from '/images/Whychoose.svg';
 
 // Card component to display each feature
 const Card = ({ title, iconSrc, description }) => (

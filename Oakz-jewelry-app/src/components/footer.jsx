@@ -3,7 +3,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import SearchIcon from '@mui/icons-material/Search';
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Oakz from '../../public/images/OAKZ.svg'
+import Oakz from '/images/OAKZ.svg'
 import './footer.css'
 
 export default function Footer() {
@@ -50,7 +50,7 @@ export default function Footer() {
           <hr/>
           <div className='flex justify-between sm:justify-center gap-10'>
             <div>
-              <p className='flex text-sm sm:text-md leading-[18.72px] text-[#FFFFFF]'> &copy; {time} - OKAZ JEWELLRY</p>
+              <p className='flex text-sm sm:text-md leading-[18.72px] text-[#FFFFFF]'> &copy; {time} - OAKZ JEWELLRY</p>
             </div>
             <div>
               <p className='flex gap-2 leading-[18.72px] text-[#FFFFFF]/30'><a className='hover:underline' href="">Terms</a>  •  <a className='hover:underline'  href="">Privacy</a></p>

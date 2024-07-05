@@ -1,14 +1,15 @@
 import React from "react";
-import neckstand from "./../../public/images/neckstand 2.svg";
-import splatter from "./../../public/images/splatter 2.svg";
-import heroDisplay1 from "./../../public/images/hero display 1.png";
-import heroDisplay2 from "./../../public/images/hero display 2.png";
-import heroDisplay3 from "./../../public/images/hero display 3.png";
-import heroDisplay4 from "./../../public/images/hero display 4.png";
-import heroDisplay5 from "./../../public/images/hero display 5.png";
+import neckstand from "/images/neckstand 2.svg";
+import splatter from "/images/splatter 2.svg";
+import heroDisplay1 from "/images/hero display 1.png";
+import heroDisplay2 from "/images/hero display 2.png";
+import heroDisplay3 from "/images/hero display 3.png";
+import heroDisplay4 from "/images/hero display 4.png";
+import heroDisplay5 from "/images/hero display 5.png";
 import "./hero.css";
 import Navbar from "./navbar";
-import HeroImages from "./HeroImages"; // Importing the HeroImages component
+import HeroImages from "./HeroImages";
+import {Link} from "react-router-dom" // Importing the HeroImages component
 
 function Hero() {
   return (
@@ -28,9 +29,12 @@ function Hero() {
               <span className="text-orange-400">Jewelry</span>!
             </h1>
             <div>
-              <button className="bg-green text-white px-[2em] py-[0.6em] rounded-full ">
-                Place Order
-              </button>
+              <Link to='/searchproduct'>
+                <button className="bg-green text-white px-[2em] py-[0.6em] rounded-full ">
+                  Place Order
+                </button>
+              </Link>
+
             </div>
           </div>
           <div className=" relative w-full h-full flex  items-center">

@@ -70,8 +70,8 @@ const CartPage = () => {
       {groupedCartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
-        <div className="flex flex-col gap-2">
-          <ul className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 ">
+          <ul className="flex flex-col gap-2 ">
             {groupedCartItems.map((item, index) => (
               <li
                 key={index}

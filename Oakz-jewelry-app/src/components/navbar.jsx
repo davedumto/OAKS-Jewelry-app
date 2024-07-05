@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 import LocalGroceryStoreOutlinedIcon from '@mui/icons-material/LocalGroceryStoreOutlined';
-import Oakz from '../../public/images/OAKZ.svg';
-import Oakz_mobile from '../../public/images/OAKZ_mobile.svg';
+import Oakz from '/images/OAKZ.svg';
+import Oakz_mobile from '/images/OAKZ_mobile.svg';
 
 function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
